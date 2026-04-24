@@ -38,13 +38,13 @@
 }
 
 .dark{
-  background-color: #282c34;
-  color: white;
-  transition: all ease-in 1s;
+  background-color: #080616;
+  color: #E8F9FF;
+  transition: all ease-in 0.5s;
 }
 
 .light{
-  background-color: aliceblue;
-  color: #282c34;
-  transition: all ease-in 1s;
+  background-color: #E8F9FF;
+  color: #0B192C;
+  transition: all ease-in 0.5s;
 }
