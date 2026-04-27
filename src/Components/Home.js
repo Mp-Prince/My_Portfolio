@@ -12,7 +12,7 @@ export default function Home(prop) {
                     <h2 className="display-1 fw-bold">MAHEBOOB PASHA</h2>
                 </div>
             </div>
-            <div className="row w-100 m-2 flex-grow-1 mx-auto">
+            <div className="row w-100  flex-grow-1 mx-auto">
                 <div className=" col-md-2 text-center ms-4" style={{ height: '250px' }}>
                     <img src="Photos/BMW.jpg" alt="Profile" className="img-fluid shadow my-4 border border-3 border-white rounded" style={{ maxWidth: '200px', maxHeight: '300px' }} />
                 </div>

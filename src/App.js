@@ -1,4 +1,5 @@
 import './App.css';
+import Education from './Components/Education';
 import Home from './Components/Home';
 import './Components/NavBar';
 import NavBar from './Components/NavBar';
@@ -25,6 +26,7 @@ function App() {
     <>
       <NavBar Mode = {mode} text = {text} toggel = {toggel} ></NavBar>
       <Home Mode = {mode} text = {text} ></Home>
+    {/* <Education Mode ={mode} text = {text}></Education> */}
     </>
   );
 }
