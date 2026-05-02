@@ -25,8 +25,8 @@ function App() {
   return (
     <>
       <NavBar Mode = {mode} text = {text} toggel = {toggel} ></NavBar>
-      <Home Mode = {mode} text = {text} ></Home>
-    {/* <Education Mode ={mode} text = {text}></Education> */}
+      {/* <Home Mode = {mode} text = {text} ></Home> */}
+    <Education Mode ={mode} text = {text}></Education>
     </>
   );
 }
