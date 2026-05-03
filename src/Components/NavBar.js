@@ -1,7 +1,7 @@
 // import React, { useState } from 'react'
+import { NavLink } from "react-router";
 
 export default function NavBar(prop) {
-
 
     return (
         // <nav className={`navbar bg-${prop.Mode} border-bottom border-body`}>
@@ -12,32 +12,34 @@ export default function NavBar(prop) {
                 </button>
                 {/* <!-- Navbar content --> */}
                 {/* <div data-bs-theme=""> */}
-                <div className={`collapse navbar-collapse text-${prop.text}`} id="navbarNav">
+                <div className={`collapse navbar-collapse text-${prop.text}`} id="navbarNav" >
                     <ul className="nav nav-tabs mt-2 navbar-nav"  >
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <li className="nav-item mx-2">
+                            <NavLink to="/" className={"nav-link"} end>Home</NavLink>
+                            {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
                         </li>
                         {/* <li className="nav-item">
                             <a className="nav-link" href="#">About</a>
-                        </li> */}
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Education</a>
+                            </li> */}
+                        <li className="nav-item mx-2">
+                            <NavLink to="/Education" className={"nav-link"} end>Education</NavLink>
+                            {/* <a className="nav-link" href="#">Education</a> */}
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link" href="#">Achviments</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Social</a>
-                        </li>
+                        </li> */}
                     </ul>
                     {/* </div> */}
-                    <div className={`d-flex form-check form-switch flex-row-reverse mx-3`} >
+                    </div>
+                    <div className={`d-flex form-check form-switch flex-row mx-3`} >
                         <input className="form-check-input" type="checkbox" value="" id="checkNativeSwitch" onClick={prop.toggel} switch />
                         <label className={`form-check-label text-${prop.text}`} htmlFor="checkNativeSwitch">
                             {/* {prop.mode} */}
                             {prop.Mode === 'dark' ? 'Disable Dark Mode' : 'Enable Dark Mode'}
                         </label>
-                    </div>
                 </div>
             </div>
         </nav>

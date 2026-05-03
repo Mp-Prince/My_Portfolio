@@ -4,6 +4,7 @@ import Home from './Components/Home';
 import './Components/NavBar';
 import NavBar from './Components/NavBar';
 import { useState } from 'react';
+import { Routes , Route } from 'react-router';
 
 function App() {
 
@@ -24,9 +25,17 @@ function App() {
 
   return (
     <>
-      <NavBar Mode = {mode} text = {text} toggel = {toggel} ></NavBar>
+        <NavBar Mode = {mode} text = {text} toggel = {toggel} ></NavBar>
+    <Routes>
+      {/* <Route path='/' index element={<Home Mode = {mode} text = {text} ></Home>}> */}
+      <Route index element={<Home Mode = {mode} text = {text} ></Home>}>
+      </Route>
+      <Route path='/Education' element={<Education Mode ={mode} text = {text}></Education>}>
+
+      </Route>
       {/* <Home Mode = {mode} text = {text} ></Home> */}
-    <Education Mode ={mode} text = {text}></Education>
+    {/* <Education Mode ={mode} text = {text}></Education> */}
+    </Routes>
     </>
   );
 }
