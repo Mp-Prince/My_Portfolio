@@ -14,7 +14,7 @@ export default function Home(prop) {
             </div>
             <div className="row w-100  flex-grow-1 mx-auto">
                 <div className=" col-md-2 text-center ms-4" style={{ height: '250px' }}>
-                    <img src="Photos/BMW.jpg" alt="Profile" className="img-fluid shadow my-4 border border-3 border-white rounded" style={{ maxWidth: '200px', maxHeight: '300px' }} />
+                    <img src="Photos/Profile.jpg" alt="Profile" className="img-fluid shadow my-4 border border-3 border-white rounded" style={{ maxWidth: '200px', maxHeight: '300px' }} />
                 </div>
                 <div className="col-md-9 d-flex justify-content-center my-3" >
                     {/* <div className="container"> */}
@@ -31,25 +31,25 @@ export default function Home(prop) {
                     <div className="row mx-2 px-2">
                         <div className="col-md-4" >
                             <label htmlFor="inputEmail4" className="form-label">Email</label>
-                            <input type="email" className="form-control" id="inputEmail4" value='maheboobpasha7869@gmail.com' disabled />
+                            <input type="email" className="form-control" id="inputEmail4" value='maheboob.pasha.tech@gmail.com' disabled />
                         </div>
                         <div className="col-md-4">
                             <label htmlFor="inputPassword4" className="form-label">Phone</label>
-                            <input type="number" className="form-control" id="inputPassword4" value='6366156000' maxLength="10"
+                            <input type="number" className="form-control" id="inputPassword4" value='6366156079' maxLength="10"
                                 disabled />
                         </div>
                         <div className="col-8">
                             <label htmlFor="inputAddress" className="form-label">Address</label>
-                            <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" disabled />
+                            <input type="text" className="form-control" id="inputAddress" value="Thammenahalli Village,The abode stay" disabled />
                         </div>
-                        <div className="col-8">
+                        {/* <div className="col-8">
                             <label htmlFor="inputAddress2" className="form-label">Address 2</label>
                             <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" disabled />
-                        </div>
+                        </div> */}
                         <div className="row m-0 p-0">
                             <div className="col-md-4">
                                 <label htmlFor="inputCity" className="form-label">City</label>
-                                <input type="text" className="form-control" id="inputCity" value='Raichur' disabled />
+                                <input type="text" className="form-control" id="inputCity" value='Bangaluru' disabled />
                             </div>
                             <div className="col-md-4">
                                 <label htmlFor="inputState" className="form-label" disabled>State</label>
@@ -59,7 +59,7 @@ export default function Home(prop) {
 
                         <div className="col-md-2">
                             <label htmlFor="inputZip" className="form-label" disabled>Pin</label>
-                            <input type="text" className="form-control" id="inputZip" value='548170' disabled />
+                            <input type="text" className="form-control" id="inputZip" value='560107' disabled />
                         </div>
                         {/* <div className="col-8">
                             <div className="form-check">
