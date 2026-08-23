@@ -1,57 +1,42 @@
-// import React, { useState } from 'react'
+import { useState } from 'react';
 import { NavLink } from "react-router";
 
 export default function NavBar(prop) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        // <nav className={`navbar bg-${prop.Mode} border-bottom border-body`}>
-        <nav className={`navbar navbar-expand-lg bg-body-tertiary `} data-bs-theme={`${prop.Mode}`}>
-            <div className={`container-fluid`}>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+        <nav className={`portfolio-nav ${prop.Mode}`} data-bs-theme={`${prop.Mode}`}>
+            <div className="container portfolio-nav-inner">
+                <NavLink to="/" className="brand-mark" end><span className="brand-symbol">&lt;/&gt;</span><span className="brand-name">Maheboob</span><span className="brand-dot">.</span></NavLink>
+                <button className="navbar-toggler" type="button" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-controls="navbarNav" aria-expanded={isMenuOpen} aria-label="Toggle navigation">
+                    <span className="menu-line"></span>
+                    <span className="menu-line"></span>
+                    <span className="menu-line"></span>
                 </button>
-                {/* <!-- Navbar content --> */}
-                {/* <div data-bs-theme=""> */}
-                <div className={`collapse navbar-collapse text-${prop.text}`} id="navbarNav" >
-                    <ul className="nav nav-tabs mt-2 navbar-nav"  >
-                        <li className="nav-item mx-2">
-                            <NavLink to="/" className={"nav-link"} end>Home</NavLink>
-                            {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
-                        </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
-                            </li> */}
-                        <li className="nav-item mx-2">
-                            <NavLink to="/Education" className={"nav-link"} end>Education</NavLink>
-                            {/* <a className="nav-link" href="#">Education</a> */}
-                        </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="#">Achviments</a>
+                <div className={`navbar-collapse ${isMenuOpen ? 'show' : ''} text-${prop.text}`} id="navbarNav">
+                    <ul className="navbar-nav portfolio-links ms-auto">
+                        <li className="nav-item">
+                            <NavLink to="/" className="nav-link" onClick={closeMenu} end>Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Social</a>
-                        </li> */}
+                            <NavLink to="/Education" className="nav-link" onClick={closeMenu} end>Education</NavLink>
+                        </li>
                     </ul>
-                    {/* </div> */}
-                    </div>
-                    <div className={`d-flex form-check form-switch flex-row mx-3`} >
-                        <input className="form-check-input" type="checkbox" value="" id="checkNativeSwitch" onClick={prop.toggel} switch />
+                    <div className="theme-control">
+                        <input className="form-check-input" type="checkbox" id="checkNativeSwitch" onChange={prop.toggel} checked={prop.Mode === 'light'} />
                         <label className={`form-check-label text-${prop.text}`} htmlFor="checkNativeSwitch">
-                            {/* {prop.mode} */}
-                            {prop.Mode === 'dark' ? 'Disable Dark Mode' : 'Enable Dark Mode'}
+                            {prop.Mode === 'dark' ? 'Light mode' : 'Dark mode'}
                         </label>
+                    </div>
                 </div>
             </div>
         </nav>
     )
 }
-NavBar.defaultprop = {
+NavBar.defaultProps = {
     Mode: 'light',
     toggel: 'light',
     text : 'Dark'
 }
-
-// NavBar.propTypes = {
-//     mode : propTypes.string,
-//     toggel : propTypes.string
-// }

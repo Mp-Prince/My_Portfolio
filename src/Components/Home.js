@@ -1,88 +1,40 @@
 import React from 'react';
+import Footer from './Footer';
 // import BMW.jpg from './Photos';
 // import { useState } from 'react';
 
 export default function Home(prop) {
     return (
-        // <div className="container-fluid min-vh-100 d-flex flex-column bg-dark text-light mt-1" data-bs-theme={prop.Mode}>
-
-        <div className={`container-fluid min-vh-100 d-flex flex-column ${prop.Mode} text-${prop.text} px-4 `} >
-            <div className="row w-100 justify-content-center m-3">
-                <div className="col-12 ">
-                    <h2 className="display-1 fw-bold">MAHEBOOB PASHA</h2>
-                </div>
-            </div>
-            <div className="row w-100  flex-grow-1 mx-auto">
-                <div className=" col-md-2 text-center ms-4" style={{ height: '250px' }}>
-                    <img src="Photos/Profile.jpg" alt="Profile" className="img-fluid shadow my-4 border border-3 border-white rounded" style={{ maxWidth: '200px', maxHeight: '300px' }} />
-                </div>
-                <div className="col-md-9 d-flex justify-content-center my-3" >
-                    {/* <div className="container"> */}
-                    {/* <div className="row mx-5" style={{ display: 'none' }}>
-                        <div className="col-md-4">
-                            <label htmlFor="inputFName" className="form-label">First Name</label>
-                            <input type="text" className="form-control" id='inputFName' value='Maheboob' aria-label="First name" disabled />
+        <>
+        <main className={`home-page ${prop.Mode} text-${prop.text}`}>
+            <section className="hero-section" aria-labelledby="hero-title">
+                <div className="hero-content container">
+                    <div className="hero-copy">
+                        <p className="eyebrow">HELLO, I AM MAHEBOOB</p>
+                        <h1 id="hero-title">Full Stack<br /><span>Developer</span></h1>
+                        <p className="hero-subtitle">Building Digital Solutions</p>
+                        <div className="skill-list" aria-label="Technology skills">
+                            <span className="skill-pill react-pill">React</span>
+                            <span className="skill-pill node-pill">Node.js</span>
+                            <span className="skill-pill js-pill">JavaScript</span>
+                            <span className="skill-pill python-pill">Python</span>
                         </div>
-                        <div className="col-md-4">
-                            <label htmlFor="inputLName" className="form-label">Last Name</label>
-                            <input type="text" className="form-control" id='inputLName' value='Pasha' aria-label="Last name" disabled />
+                        <p className="hero-description">Passionate about creating innovative web applications and solving complex problems through clean, efficient code.</p>
+                    </div>
+                    <div className="code-showcase" aria-label="Developer profile">
+                        <img className="profile-image" src="/Photos/Profile.jpg" alt="Maheboob Pasha" />
+                        <div className="code-window">
+                            <div className="window-dots"><i></i><i></i><i></i></div>
+                            <pre><span className="code-blue">const</span> developer = {'{'}
+  <span className="code-key">passion</span>: <span className="code-green">'coding'</span>,
+  <span className="code-key">focus</span>: <span className="code-green">'innovation'</span>
+{'}'};</pre>
                         </div>
-                    </div> */}
-                    <div className="row mx-2 px-2">
-                        <div className="col-md-4" >
-                            <label htmlFor="inputEmail4" className="form-label">Email</label>
-                            <input type="email" className="form-control" id="inputEmail4" value='maheboob.pasha.tech@gmail.com' disabled />
-                        </div>
-                        <div className="col-md-4">
-                            <label htmlFor="inputPassword4" className="form-label">Phone</label>
-                            <input type="number" className="form-control" id="inputPassword4" value='6366156079' maxLength="10"
-                                disabled />
-                        </div>
-                        <div className="col-8">
-                            <label htmlFor="inputAddress" className="form-label">Address</label>
-                            <input type="text" className="form-control" id="inputAddress" value="Thammenahalli Village,The abode stay" disabled />
-                        </div>
-                        {/* <div className="col-8">
-                            <label htmlFor="inputAddress2" className="form-label">Address 2</label>
-                            <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" disabled />
-                        </div> */}
-                        <div className="row m-0 p-0">
-                            <div className="col-md-4">
-                                <label htmlFor="inputCity" className="form-label">City</label>
-                                <input type="text" className="form-control" id="inputCity" value='Bangaluru' disabled />
-                            </div>
-                            <div className="col-md-4">
-                                <label htmlFor="inputState" className="form-label" disabled>State</label>
-                                <input type="text" className="form-control" id="inputState" value='Karnataka' disabled/>
-                            </div>
-                        </div>
-
-                        <div className="col-md-2">
-                            <label htmlFor="inputZip" className="form-label" disabled>Pin</label>
-                            <input type="text" className="form-control" id="inputZip" value='560107' disabled />
-                        </div>
-                        {/* <div className="col-8">
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" id="gridCheck" disabled />
-                                <label className="form-check-label" htmlFor="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div> */}
-                        {/* <div className="col-8">
-                            <button type="submit" className="btn btn-primary">Sign in</button>
-                        </div> */}
-
+                        <div className="profile-badge"><span></span> MAHEBOOB PASHA</div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
+        </>
     )
 }
-
-
-
-
-// Home.propType = {
-//     Mode : propTypes.string
-// }
