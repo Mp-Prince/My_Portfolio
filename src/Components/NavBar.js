@@ -23,6 +23,9 @@ export default function NavBar(prop) {
                         <li className="nav-item">
                             <NavLink to="/Education" className="nav-link" onClick={closeMenu} end>Education</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink to="/Resume" className="nav-link" onClick={closeMenu} end>Resume</NavLink>
+                        </li>
                     </ul>
                     <div className="theme-control">
                         <input className="form-check-input" type="checkbox" id="checkNativeSwitch" onChange={prop.toggel} checked={prop.Mode === 'light'} />

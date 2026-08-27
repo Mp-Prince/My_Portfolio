@@ -2,6 +2,7 @@ import './App.css';
 import Education from './Components/Education';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
+import Resume from './Components/Resume';
 // import './Components/NavBar';
 import NavBar from './Components/NavBar';
 import { useState } from 'react';
@@ -33,6 +34,8 @@ function App() {
       </Route>
       <Route path='/Education' element={<Education Mode ={mode} text = {text}></Education>}>
 
+      </Route>
+      <Route path='/Resume' element={<Resume Mode={mode} text={text} />}>
       </Route>
       {/* <Home Mode = {mode} text = {text} ></Home> */}
     {/* <Education Mode ={mode} text = {text}></Education> */}

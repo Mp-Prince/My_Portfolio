@@ -156,10 +156,41 @@ body { background: #111827; }
 .education-card-years { margin: 0; }
 .education-card-years small { color: #49a7ff; font: 700 .75rem Consolas, monospace; letter-spacing: .04em; }
 
+/* ==================== Resume page ==================== */
+.resume-page { min-height: 100vh; padding: 3rem 0 4rem; background: #111827; color: #f4f7fc; }
+.resume-page.light { background: #f5f8fc; color: #15243a; }
+.resume-container { max-width: 980px; }
+.resume-header { text-align: center; margin-bottom: 2rem; }
+.resume-header .eyebrow { margin-bottom: .6rem; }
+.resume-header h1 { font: 400 clamp(2.2rem, 5vw, 3.2rem) Georgia, serif; margin: 0; }
+.resume-header > p:last-child { color: #adbbcf; margin: .8rem 0 0; }
+.light .resume-header > p:last-child { color: #52637a; }
+.resume-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: #65b7ff; font: 700 .72rem Consolas, monospace; letter-spacing: .12em; }
+.resume-download { border: 0; background: #2165e8; color: #fff; text-decoration: none; padding: .7rem 1rem; border-radius: 5px; font: 600 .85rem inherit; letter-spacing: 0; cursor: pointer; }
+.resume-download:hover { background: #3c80ff; }
+.resume-document { background: #fff; color: #172235; padding: clamp(1.5rem, 5vw, 3.5rem); border-top: 4px solid #49a7ff; box-shadow: 0 18px 40px rgba(0, 0, 0, .25); }
+.resume-document-header { display: flex; justify-content: space-between; gap: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #dbe5f0; }
+.resume-document-header h2 { color: #1769aa; font: 400 clamp(1.8rem, 4vw, 2.7rem) Georgia, serif; margin: 0 0 .35rem; }
+.resume-document-header p { color: #52637a; margin: 0; }
+.resume-contact { display: flex; flex-direction: column; align-items: flex-end; gap: .25rem; color: #52637a; font-size: .85rem; text-align: right; }
+.resume-contact a, .resume-profiles a { color: #1769aa; text-decoration: none; }
+.resume-contact a:hover, .resume-profiles a:hover { text-decoration: underline; }
+.resume-section { padding-top: 1.5rem; }
+.resume-section h3 { color: #1769aa; font: 700 .78rem Consolas, monospace; letter-spacing: .14em; margin: 0 0 .6rem; text-transform: uppercase; }
+.resume-section h4 { font-size: 1rem; margin: 0 0 .25rem; }
+.resume-section p { color: #52637a; line-height: 1.65; margin: 0; }
+.resume-skills, .resume-profiles { display: flex; flex-wrap: wrap; gap: .5rem; }
+.resume-skills span { background: #e5eef8; color: #1769aa; padding: .4rem .7rem; border-radius: 4px; font-size: .85rem; }
+.resume-profiles { gap: 1.25rem; }
+
 @media (max-width: 767px) {
   .education-page { padding: 2rem 0 3rem; }
   .education-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .education-card-img { height: 180px; }
+  .resume-page { padding: 2rem 0 3rem; }
+  .resume-toolbar { align-items: flex-start; flex-direction: column; }
+  .resume-document-header { flex-direction: column; gap: 1rem; }
+  .resume-contact { align-items: flex-start; text-align: left; }
 }
 
 @media (max-width: 767px) { .portfolio-nav-inner { width: calc(100% - 2.4rem); min-height: 64px; justify-content: space-between; flex-wrap: wrap; } .navbar-toggler { display: block; } .portfolio-nav .navbar-collapse { display: none; width: 100%; padding: .5rem 0 1rem; border-top: 1px solid rgba(142, 173, 214, .16); } .portfolio-nav .navbar-collapse.show { display: block; } .portfolio-links { display: block; gap: .2rem; margin-top: .4rem; } .portfolio-links .nav-link { padding: .7rem .5rem; } .theme-control { margin: .7rem 0 .2rem; padding: .7rem .5rem 0; border-top: 1px solid rgba(142, 173, 214, .16); } .hero-content { padding: 4.8rem 1.2rem 3.2rem; flex-direction: column-reverse; text-align: center; } .hero-copy { max-width: 100%; } .code-showcase { flex: 0 0 auto; margin-bottom: 1.5rem; } .code-window { display: none; } .hero-copy h1 { font-size: clamp(3rem, 15vw, 4.4rem); } .hero-description { font-size: 1rem; margin: 1.6rem auto 0; } .skill-list { gap: .5rem; justify-content: center; } .skill-pill { padding: .5rem .8rem; font-size: .78rem; } .contact-strip { flex-direction: column; gap: 1.2rem; padding: 1.5rem 1.2rem 2.5rem; } .contact-strip a, .contact-strip span { overflow-wrap: anywhere; } }
