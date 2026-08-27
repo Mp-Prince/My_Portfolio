@@ -1,9 +1,7 @@
-import { NavLink } from "react-router";
-
 function Footer({ Mode = 'dark', text = 'light' }) {
     return (
         <footer className={`portfolio-footer ${Mode} text-${text}`}>
-            <div className="container py-5">
+            <div className="container py-3">
                 <div className="row g-4">
                     <div className="col-lg-5">
                         <p className="footer-kicker mb-2">PORTFOLIO</p>
@@ -13,10 +11,11 @@ function Footer({ Mode = 'dark', text = 'light' }) {
                         </p>
                     </div>
                     <div className="col-6 col-lg-3">
-                        <h3 className="h6 text-uppercase mb-3">Explore</h3>
-                        <nav className="d-flex flex-column gap-2" aria-label="Footer navigation">
-                            <NavLink to="/" className="footer-link" end>Home</NavLink>
-                            <NavLink to="/Education" className="footer-link">Education</NavLink>
+                        <h3 className="h6 text-uppercase mb-3">Social</h3>
+                        <nav className="d-flex flex-column gap-2" aria-label="Social links">
+                            <a className="footer-link" href="https://github.com/Mp-Prince" target="_blank" rel="noreferrer">GitHub</a>
+                            <a className="footer-link" href="https://www.linkedin.com/in/maheboob-pasha-a4b561317/" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a className="footer-link" href="https://leetcode.com/u/Maheboob_Pasha/" target="_blank" rel="noreferrer">LeetCode</a>
                         </nav>
                     </div>
                     <div className="col-6 col-lg-4">
@@ -28,7 +27,7 @@ function Footer({ Mode = 'dark', text = 'light' }) {
                         </div>
                     </div>
                 </div>
-                <div className="footer-bottom mt-5 pt-3">
+                <div className="footer-bottom mt-2 pt-2">
                     <small className="footer-muted">&copy; {new Date().getFullYear()} Maheboob Pasha. All rights reserved.</small>
                 </div>
             </div>
